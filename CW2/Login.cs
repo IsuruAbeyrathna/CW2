@@ -15,10 +15,5 @@ namespace CW2
         private SqlCommand com;
         private SqlDataReader dreader;
 
-        public Login()
-        {
-            constr = ConfigurationManager.AppSettings["constr"].ToString();
-            con = new SqlConnection(constr);
-        }
     }
 }
