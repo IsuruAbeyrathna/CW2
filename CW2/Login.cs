@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -13,5 +14,11 @@ namespace CW2
         private SqlConnection con;
         private SqlCommand com;
         private SqlDataReader dreader;
+
+        public Login()
+        {
+            constr = ConfigurationManager.AppSettings["constr"].ToString();
+            con = new SqlConnection(constr);
+        }
     }
 }
