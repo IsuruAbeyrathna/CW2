@@ -96,11 +96,16 @@
     <Content Include="packages.config" />
     <Content Include="Pic\bg3.jpg" />
     <Content Include="Pic\fb.png" />
+    <Content Include="Pic\loginbk.jpg" />
     <Content Include="Pic\m1.jpg" />
     <Content Include="Pic\move-top.png" />
+    <Content Include="Pic\Panel.png" />
     <Content Include="Pic\s1.png" />
     <Content Include="Pic\s2.png" />
     <Content Include="Pic\s3.png" />
+    <Content Include="Pic\tp2.png" />
+    <Content Include="Pic\bvk2.jpg" />
+    <Content Include="Pic\bvk.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -117,6 +122,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\font-awesome.min.css" />
+    <Content Include="Styles\Stylelogin.css" />
     <Content Include="Styles\style_xyz.css" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
