@@ -38,7 +38,7 @@
                                 <asp:Button ID="btnlogin" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="btnlogin_Click" /> &nbsp; &nbsp; <a href="cust_register.aspx">Forgot Password?</a>
                             </div>
 
-                                Not customer yet? <a href="cust_register.aspx">Register here</a>
+                                Not customer yet? <a href="Signup.aspx">Register here</a>
                         </div>
 
                     </div>

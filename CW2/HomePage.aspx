@@ -53,7 +53,7 @@
 							<ul class="menu">
 								<li class="active"><a href="index.html">Home</a></li>
 								<li class="mx-lg-4 my-md-0 my-2"><a href="#services">Services</a></li>
-								<li class="mx-lg-4 my-md-0 my-2"><a href="#blog">Sign Up</a></li>
+								<li class="mx-lg-4 my-md-0 my-2"><a href="Signup.aspx">Sign Up</a></li>
 								<li class="mx-lg-4 my-md-0 my-2"><a href="Login.aspx">Login</a></li>
 								<li class="mx-lg-4 my-md-0 my-2"><a href="#about">About Us</a></li>
 								<li><a href="#contact">Contact Us</a></li>
