@@ -1,0 +1,222 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Institution X</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="Content/Site1.css" rel="stylesheet" />
+    <link href="Content/NavStyle.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.min.css" rel="stylesheet" />
+
+    <title>XYZ </title>
+
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">institution X</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                             alt="User picture">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">
+                            <b>User</b>
+                        </span>
+                        <span class="user-role">
+
+                        </span>
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>Online</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+                        <li class="sidebar-content">
+                            <a href="@Url.Action(" Profile", "Home" )" class="elements">
+                                <i class="fa fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                            <a href="@Url.Action(" EmpIndex", "Dashboard" )" class="elements">
+                                <i class="fa fa-bars"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <a href="@Url.Action(" EmpWorkflow", "Tasks" )" class="elements">
+                                <i class="fa fa-globe"></i>
+                                <span>Workflow List</span>
+                            </a>
+
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="@Url.Action(" Index", "Dashboard" )" class="elements">
+                                <i class="fa fa-bars"></i>
+                                <span>DashBoard</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="@Url.Action(" AdminWorkflow", "Tasks" )" class="elements">
+                                <i class="fa fa-globe"></i>
+                                <span>Workflow List</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Process</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action(" Index", "Processes" )" class="elements">
+                                            Active
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Documented</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" )" class="elements">
+                                <i class="fa fa-globe"></i>
+                                <span>User Management</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" )" class="elements">
+                                <i class="fa fa-globe"></i>
+                                <span>Departments</span>
+                            </a>
+                        </li>
+                    </ul>
+                    }
+
+                </div>
+
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+            <div class="sidebar-footer">
+
+                <a href="#" onclick="document.forms[0].submit();">
+                    Logout
+                    <i class="fa fa-power-off"></i>
+                </a>
+
+            </div>
+        </nav>
+        <!-- sidebar-wrapper  -->
+        <main class="page-content">
+            <div class="container-fluid">
+                
+
+                <footer class="text-center">
+                    <div class="mb-2">
+                        <small>
+                            <a>
+                                © 2020 Institution X BPMS <i class="fa fa-heart" style="color:red"></i>
+                                All rights reserved
+                            </a>
+                        </small>
+                    </div>
+                </footer>
+            </div>
+        </main>
+        <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+
+
+    <script>
+        jQuery(function ($) {
+
+            $(".sidebar-dropdown > a").click(function () {
+                $(".sidebar-submenu").slideUp(200);
+                if (
+                  $(this)
+                    .parent()
+                    .hasClass("active")
+                ) {
+                    $(".sidebar-dropdown").removeClass("active");
+                    $(this)
+                      .parent()
+                      .removeClass("active");
+                } else {
+                    $(".sidebar-dropdown").removeClass("active");
+                    $(this)
+                      .next(".sidebar-submenu")
+                      .slideDown(200);
+                    $(this)
+                      .parent()
+                      .addClass("active");
+                }
+            });
+
+            $("#close-sidebar").click(function () {
+                $(".page-wrapper").removeClass("toggled");
+            });
+            $("#show-sidebar").click(function () {
+                $(".page-wrapper").addClass("toggled");
+            });
+
+
+
+
+        });
+    </script>
+    @* LogOut Script *@
+    <script type="text/javascript">
+        $(function () {
+            //Remove the style attributes.
+            $(".navbar-nav li, .navbar-nav a, .navbar-nav ul").removeAttr('style');
+
+            //Apply the Bootstrap class to the Submenu.
+            $(".dropdown-menu").closest("li").removeClass().addClass("dropdown-toggle");
+
+            //Apply the Bootstrap properties to the Submenu.
+            $(".dropdown-toggle").find("a").eq(0).attr("data-toggle", "dropdown").attr("aria-haspopup", "true").attr("aria-expanded", "false").append("<span class='caret'></span>");
+
+            //Apply the Bootstrap "active" class to the selected Menu item.
+            $("a.selected").closest("li").addClass("active");
+            $("a.selected").closest(".dropdown-toggle").addClass("active");
+        });
+    </script>
+    
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>    
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>   
+</body>
+</html>

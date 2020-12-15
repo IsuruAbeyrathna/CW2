@@ -21,33 +21,40 @@
                 <div class="row">
                     <div class="row">
                         <div class="col-xs-6">                            
-                            <div class="form-group">
-                                <asp:Label ID="lblmsg" runat="server" ForeColor="Red"></asp:Label>
+                            <div class="form-group">                                
                                 <asp:Label Text="First Name" runat="server" />
                                 <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
                                 <span class="help-block"></span>
                             </div>
 
-                            <div class="form-group">
-                                <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
+                            <div class="form-group">                                
                                 <asp:Label Text="Last Name" runat="server" />
                                 <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
                                 <span class="help-block"></span>
                             </div>
-                            <div class="form-group">
-                                <asp:Label ID="Label2" runat="server" ForeColor="Red"></asp:Label>
+                            <div class="form-group">                                
+                                <asp:Label Text="Address" runat="server" />
+                                <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">                                
+                                <asp:Label Text="Email" runat="server" />
+                                <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">                                
                                 <asp:Label Text="Contact No" runat="server" />
                                 <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
                                 <span class="help-block"></span>
                             </div>
+
                             <div class="form-group">
-                                <asp:Label ID="Label3" runat="server" ForeColor="Red"></asp:Label>
-                                <asp:Label Text="City" runat="server" />
+                                <asp:Label Text="Password" runat="server" />
                                 <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
                                 <span class="help-block"></span>
                             </div>
                             <div class="form-group">
-                                <asp:Label Text="Password" runat="server" />
+                                <asp:Label Text="Confirm Password" runat="server" />
                                 <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
                                 <span class="help-block"></span>
                             </div>
