@@ -75,6 +75,7 @@
     <Content Include="Admin\Services.aspx" />
     <Content Include="Admin\Tracking.aspx" />
     <Content Include="Admin\UserAccounts.aspx" />
+    <None Include="Admin\EmpManagement" />
     <Content Include="bin\CW2.dll" />
     <Content Include="bin\CW2.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
@@ -88,12 +89,14 @@
     <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="Clerk\ClDashboard.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Dash.css" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\NavStyle.css" />
     <Content Include="Content\Site1.css" />
@@ -141,6 +144,11 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="HomePage.aspx" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="Images\addnew.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\save.png" />
     <Content Include="Login.aspx" />
     <Content Include="obj\Debug\CW2.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\CW2.dll" />
@@ -192,6 +200,7 @@
     <Content Include="obj\Debug\CW2.csprojResolveAssemblyReference.cache" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Admin\AdmHome.Master" />
+    <Content Include="Clerk\ClerkHome.Master" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -286,6 +295,27 @@
     </Compile>
     <Compile Include="Admin\UserAccounts.aspx.designer.cs">
       <DependentUpon>UserAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WebForm2.aspx.cs">
+      <DependentUpon>EmpManagement</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WebForm2.aspx.designer.cs">
+      <DependentUpon>EmpManagement</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk\ClerkHome.Master.cs">
+      <DependentUpon>ClerkHome.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clerk\ClerkHome.Master.designer.cs">
+      <DependentUpon>ClerkHome.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Clerk\ClDashboard.aspx.cs">
+      <DependentUpon>ClDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clerk\ClDashboard.aspx.designer.cs">
+      <DependentUpon>ClDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
