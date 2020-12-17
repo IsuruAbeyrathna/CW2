@@ -2,5 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    This is Reports
+    <h2>Reports</h2>
+    <div>
+    <asp:Button Text="Customer Detail Report" runat="server" class="btn btn-outline-danger" BackColor="#3399FF" OnClick="Unnamed1_Click" />         
+        
+    </div>
+
+    <div>
+    <asp:Button Text="Sales Report" runat="server" class="btn btn-outline-success" BackColor="#00FFCC" OnClick="Unnamed2_Click" />    
+
+    </div>
+    <div>
+    <asp:Button Text="Employee Report" runat="server" class="btn btn-outline-Warning" BackColor="#0099FF" /> 
+
+    </div>
+       
 </asp:Content>

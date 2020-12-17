@@ -5,7 +5,7 @@
      <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
             <div class="panel-heading" style="background-color:rebeccapurple; color:white">
-                <strong>User Accounts</strong>
+                <strong>Services</strong>
             </div>            
         </div>
         <div class="panel-body">

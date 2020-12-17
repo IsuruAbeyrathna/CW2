@@ -11,7 +11,22 @@ namespace CW2.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Reports/EmpRep.aspx");
+        }
+
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Reports/CusRep.aspx");
+        }
+
+        protected void Unnamed2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Reports/SalesRep.aspx");
         }
     }
 }
