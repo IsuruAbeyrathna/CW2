@@ -14,10 +14,7 @@ namespace CW2.Admin
             
         }
 
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("../Reports/EmpRep.aspx");
-        }
+
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
@@ -27,6 +24,11 @@ namespace CW2.Admin
         protected void Unnamed2_Click(object sender, EventArgs e)
         {
             Response.Redirect("../Reports/SalesRep.aspx");
+        }
+
+        protected void Unnamed3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Reports/EmpRep.aspx");
         }
     }
 }

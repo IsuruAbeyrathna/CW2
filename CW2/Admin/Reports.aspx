@@ -3,17 +3,20 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2>Reports</h2>
+
+    <br />
     <div>
     <asp:Button Text="Customer Detail Report" runat="server" class="btn btn-outline-danger" BackColor="#3399FF" OnClick="Unnamed1_Click" />         
         
     </div>
-
+    <br />
     <div>
     <asp:Button Text="Sales Report" runat="server" class="btn btn-outline-success" BackColor="#00FFCC" OnClick="Unnamed2_Click" />    
 
     </div>
+    <br />
     <div>
-    <asp:Button Text="Employee Report" runat="server" class="btn btn-outline-Warning" BackColor="#0099FF" /> 
+    <asp:Button Text="Employee Report" runat="server" class="btn btn-outline-Warning" BackColor="#0099FF" OnClick="Unnamed3_Click" /> 
 
     </div>
        

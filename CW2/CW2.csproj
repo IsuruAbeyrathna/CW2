@@ -142,6 +142,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Images\Annotation 2020-12-17 214654ss.jpg" />
     <Content Include="Reports\CusRep.aspx" />
     <Content Include="Reports\EmpRep.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
