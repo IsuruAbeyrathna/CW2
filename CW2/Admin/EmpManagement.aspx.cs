@@ -9,9 +9,8 @@ using System.Web.UI.WebControls;
 
 namespace CW2.Admin
 {
-    public partial class UserAccounts : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
-
         string cs = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,30 +24,27 @@ namespace CW2.Admin
 
         void clear()
         {
-            txtuname.Text = "";
-            Txtpass.Text = "";
-            txtempid.Text = "";
+            txtname.Text = "";
+            Txtaddr.Text = "";
+            txtemail.Text = "";
+            txtphone.Text = "";
+            txtgender.Text = "";
             txtstatus.Text = "";
-            txtType.Text = "";
-            
         }
-
-
-
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(cs))
+            using(SqlConnection con =new SqlConnection(cs))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Insert into tbl_emp_login values('" + txtuname.Text + "', '" + Txtpass.Text + "' , '" + txtempid.Text + "', '" + txtType.Text + "', '" + txtstatus.Text + "')", con);
+                SqlCommand cmd = new SqlCommand("Insert into tbl_employee values('" +txtname.Text + "', '" + Txtaddr.Text +"' , '" +txtemail.Text+ "', '" + txtphone.Text+ "', '"+txtgender.Text+"', '"+ txtstatus.Text+"')", con);
                 int t = cmd.ExecuteNonQuery();
                 if (t > 0)
                 {
-                    Response.Write("<script>alert(' New User added Succesfully') </script>");
+                    Response.Write("<script>alert('New Employee added submitted Succesfully') </script>");
                     gvBind();
                 }
                 clear();
-
+                
             }
 
         }
@@ -58,13 +54,12 @@ namespace CW2.Admin
             clear();
         }
 
-
         protected void gvBind()
         {
             using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * from tbl_emp_login", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from tbl_employee", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows == true)
                 {
@@ -79,56 +74,56 @@ namespace CW2.Admin
         {
             GridView1.EditIndex = e.NewEditIndex;
             gvBind();
-
         }
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
             string name = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
-            string password = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
-            string empid = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
-            string type = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;            
-            string status = ((TextBox)GridView1.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
-            using (SqlConnection con = new SqlConnection(cs))
+            string address = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
+            string email = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+            string phone= ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
+            string gender= ((TextBox)GridView1.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
+            string status= ((TextBox)GridView1.Rows[e.RowIndex].Cells[6].Controls[0]).Text;
+            using(SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("update tbl_emp_login set usr_name='" + name + "' , usr_password='" + password + "', emp_id='" + empid+ "',usr_type='" + type+ "', usr_status='" + status+ "' WHERE usr_id='" + id + "' ", con);
-
+                SqlCommand cmd = new SqlCommand("update tbl_employee set emp_name='" + name + "' , emp_address='" + address + "', emp_email='" + email + "',emp_phone='" + phone + "', emp_gender='" + gender + "', emp_status='" + status + "'WHERE emp_id='" + id + "' ", con);
                 int t = cmd.ExecuteNonQuery();
                 if (t > 0)
                 {
-                    Response.Write("<script>alert('User data has updated') </script>");
+                    Response.Write("<script>alert('Employee record has updated') </script>");
                     GridView1.EditIndex = -1;
                     gvBind();
                 }
 
             }
-        }
 
-        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
-            using (SqlConnection con = new SqlConnection(cs))
-            {
-                con.Open();
-                {
-                    SqlCommand cmd = new SqlCommand("delete from tbl_emp_login where usr_id='" + id + "'", con);
-                    int t = cmd.ExecuteNonQuery();
-                    if (t > 0)
-                    {
-                        Response.Write("<script>alert('User has Deleted') </script>");
-                        GridView1.EditIndex = -1;
-                        gvBind();
-                    }
-                }
-            }
         }
 
         protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GridView1.EditIndex = -1;
             gvBind();
+        }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
+            using(SqlConnection con = new SqlConnection(cs))
+            {
+                con.Open();
+                {
+                    SqlCommand cmd = new SqlCommand("delete from tbl_employee where emp_id='"+id+"'", con);
+                    int t = cmd.ExecuteNonQuery();
+                    if (t > 0)
+                    {
+                        Response.Write("<script>alert('Employee record has Deleted') </script>");
+                        GridView1.EditIndex = -1;
+                        gvBind();
+                    }
+                }
+            }
         }
     }
 }

@@ -10,34 +10,61 @@
 namespace CW2.Admin {
     
     
-    public partial class Services {
+    public partial class WebForm2 {
         
         /// <summary>
-        /// txtsname control.
+        /// txtname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsname;
+        protected global::System.Web.UI.WebControls.TextBox txtname;
         
         /// <summary>
-        /// txtfee control.
+        /// Txtaddr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtfee;
+        protected global::System.Web.UI.WebControls.TextBox Txtaddr;
         
         /// <summary>
-        /// txtdes control.
+        /// txtemail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdes;
+        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        
+        /// <summary>
+        /// txtphone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtphone;
+        
+        /// <summary>
+        /// txtgender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtgender;
+        
+        /// <summary>
+        /// txtstatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtstatus;
         
         /// <summary>
         /// btnSubmit control.
@@ -58,12 +85,12 @@ namespace CW2.Admin {
         protected global::System.Web.UI.WebControls.Button btnReset;
         
         /// <summary>
-        /// gvServices control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvServices;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

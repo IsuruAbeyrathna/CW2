@@ -75,7 +75,7 @@
     <Content Include="Admin\Services.aspx" />
     <Content Include="Admin\Tracking.aspx" />
     <Content Include="Admin\UserAccounts.aspx" />
-    <None Include="Admin\EmpManagement" />
+    <Content Include="Admin\EmpManagement.aspx" />
     <Content Include="bin\CW2.dll" />
     <Content Include="bin\CW2.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
@@ -237,7 +237,9 @@
     <Content Include="Styles\bootstrap-4.5.3-dist\js\bootstrap.bundle.min.js" />
     <Content Include="Styles\bootstrap-4.5.3-dist\js\bootstrap.js" />
     <Content Include="Styles\bootstrap-4.5.3-dist\js\bootstrap.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\AdDashboard.aspx.cs">
@@ -261,6 +263,7 @@
     <Compile Include="Admin\Customers.aspx.designer.cs">
       <DependentUpon>Customers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Employee.cs" />
     <Compile Include="Admin\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -296,12 +299,12 @@
     <Compile Include="Admin\UserAccounts.aspx.designer.cs">
       <DependentUpon>UserAccounts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\WebForm2.aspx.cs">
-      <DependentUpon>EmpManagement</DependentUpon>
+    <Compile Include="Admin\EmpManagement.aspx.cs">
+      <DependentUpon>EmpManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\WebForm2.aspx.designer.cs">
-      <DependentUpon>EmpManagement</DependentUpon>
+    <Compile Include="Admin\EmpManagement.aspx.designer.cs">
+      <DependentUpon>EmpManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clerk\ClerkHome.Master.cs">
       <DependentUpon>ClerkHome.Master</DependentUpon>
