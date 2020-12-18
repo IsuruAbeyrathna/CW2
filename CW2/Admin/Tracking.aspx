@@ -18,9 +18,9 @@
             <div>
                             <asp:GridView ID="GridView1" runat="server" EmptyDataText="No Reords Found!" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
                 <Columns>
-                    <asp:BoundField DataFormatString="emp_id" HeaderText="Emp Id" />
-                    <asp:BoundField DataField="emp_name" HeaderText="Emp Name" />
-                    <asp:BoundField DataField="emp_address" HeaderText="Emp Address" />
+                    <asp:BoundField DataFormatString="order_id" HeaderText="Order Id" />
+                    <asp:BoundField DataField="ord_description" HeaderText="Order Description" />
+                    <asp:BoundField DataField="ord_status" HeaderText="Order Status" />
                 </Columns>
                 <EmptyDataRowStyle BackColor="#CCFF99" />
                 <FooterStyle BackColor="White" ForeColor="#000066" />

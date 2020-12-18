@@ -482,6 +482,7 @@
       <DependentUpon>TrackCustomerOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBHelper.cs" />
+    <Compile Include="LCustomer.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Services.cs" />
     <Compile Include="Reports\CusRep.aspx.cs">

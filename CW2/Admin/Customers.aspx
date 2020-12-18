@@ -24,10 +24,10 @@
         <Columns>
             <asp:TemplateField HeaderText="First Name" HeaderStyle-HorizontalAlign="Center">
                 <ItemTemplate>
-                    <asp:Label Text='<%# Eval("cus_fname") %>' runat="server" />
+                    <asp:Label Text='<%# Eval("cus_name") %>' runat="server" />
                 </ItemTemplate>
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtFirstName" Text='<%# Eval("cus_fname") %>' runat="server" />
+                    <asp:TextBox ID="txtFirstName" Text='<%# Eval("cus_name") %>' runat="server" />
                 </EditItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="txtFirstNameFooter" runat="server" />
