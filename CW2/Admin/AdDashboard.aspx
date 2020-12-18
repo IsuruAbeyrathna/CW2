@@ -6,7 +6,9 @@
 <div class="tile wide invoice">
     <div class="header">
         <div class="center">
-            <div class="count">2</div>
+            <div class="count">
+                <asp:Label ID ="lblCountor" runat="server" Font-Bold="True" Font-Size="XX-Large" Height="75px" Width="75px" />
+            </div>
             <div class="title"></div>
             
         </div>
@@ -18,7 +20,7 @@
 <div class="tile wide quote">
     <div class="header">
         <div class="center">
-            <div class="count">10</div>
+            <div class="count">3</div>
             <div class="title"></div>
         </div>
     </div>
@@ -29,7 +31,7 @@
 <div class="tile wide invoice">
     <div class="header">
         <div class="center">
-            <div class="count">3</div>
+            <div class="count">10</div>
             <div class="title"></div>
         </div>
     </div>
@@ -40,7 +42,7 @@
 <div class="tile wide quote">
     <div class="header">
         <div class="center">
-            <div class="count">3</div>
+            <div class="count">13</div>
             <div class="title"></div>
         </div>
     </div>
@@ -51,7 +53,7 @@
 <div class="tile wide invoice">
     <div class="header">
         <div class="center">
-            <div class="count">1</div>
+            <div class="count">9</div>
             <div class="title"></div>
         </div>
     </div>
@@ -62,7 +64,7 @@
     <div class="tile wide quote">
     <div class="header">
         <div class="center">
-            <div class="count">1</div>
+            <div class="count">Rs.10000</div>
             <div class="title"></div>
         </div>
     </div>
@@ -73,7 +75,7 @@
     <div class="tile wide invoice">
     <div class="header">
         <div class="center">
-            <div class="count">1</div>
+            <div class="count">6</div>
             <div class="title"></div>
         </div>
     </div>
@@ -84,7 +86,7 @@
 <div class="tile wide quote">
     <div class="header">
         <div class="center">
-            <div class="count">1</div>
+            <div class="count">4</div>
             <div class="title"></div>
         </div>
     </div>

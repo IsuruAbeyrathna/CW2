@@ -9,6 +9,7 @@ namespace CW2.Admin
 {
     public class Employee
     {
+        //delacring variables
         private int emp_id;
         private string emp_name;
         private string emp_address;
@@ -25,7 +26,7 @@ namespace CW2.Admin
         private SqlDataReader dreader;
         private string sql;
 
-
+        //getters and setters
         public int Emp_id
         {
             get { return emp_id; }

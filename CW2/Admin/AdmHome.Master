@@ -54,6 +54,9 @@
                         <a href="Services.aspx">Services</a>
                     </li>
                     <li>
+                        <a href="Product.aspx">Product</a>
+                    </li>
+                    <li>
                         <a href="EmpManagement.aspx">Employee Management</a>
                     </li>
                     <li>
@@ -62,10 +65,11 @@
                     <li>
                         <a href="Reports.aspx">Reports</a>
                     </li>
+                    <li>
+                        <a href="Home.aspx">Logout</a>
+                    </li>
                     
-                </ul>
-
-                
+                </ul>                
             </nav>
 
             <!-- Page Content Holder -->

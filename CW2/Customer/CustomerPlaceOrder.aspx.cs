@@ -44,6 +44,7 @@ namespace CW2.Customer
             LoadServices();
         }
 
+        //making order
         protected void btnPlaceOrder_Click(object sender, EventArgs e)
         {
 

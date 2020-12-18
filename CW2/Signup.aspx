@@ -10,77 +10,62 @@
     <link href="Styles/Stylelogin.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.0.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="fonts/material-icon/css/material-design-iconic-font.min.css" rel="stylesheet" />
 </head>
-<body style="overflow:hidden; margin:0; background-image:url('Pic/bvk2.jpg')">
-    <form id="form1" runat="server">
-    <div class="panel-img">
-        <img src="Pic/tp2.png"/>               
-    </div>
-        <div style="position:absolute; z-index:1;" id="layer1">
-            <div class="modal-body" style="margin:30px 0px 0px 550px;">
-                <div class="row">
-                    <div class="row">
-                        <div class="col-xs-6">                            
-                            <div class="form-group">                                
-                                <asp:Label Text="First Name" runat="server" />
-                                <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
-                                <span class="help-block"></span>
-                            </div>
-
-                            <div class="form-group">                                
-                                <asp:Label Text="Last Name" runat="server" />
-                                <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
-                                <span class="help-block"></span>
-                            </div>
-                            <div class="form-group">                                
-                                <asp:Label Text="Address" runat="server" />
-                                <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
-                                <span class="help-block"></span>
-                            </div>
-                            <div class="form-group">                                
-                                <asp:Label Text="Email" runat="server" />
-                                <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
-                                <span class="help-block"></span>
-                            </div>
-                            <div class="form-group">                                
-                                <asp:Label Text="Contact No" runat="server" />
-                                <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
-                                <span class="help-block"></span>
-                            </div>
-
+<body>
+<div class="main">
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" class="register-form" id="register-form">
                             <div class="form-group">
-                                <asp:Label Text="Password" runat="server" />
-                                <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
-                                <span class="help-block"></span>
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name"/>
                             </div>
                             <div class="form-group">
-                                <asp:Label Text="Confirm Password" runat="server" />
-                                <asp:TextBox runat="server" Enabled="true" CssClass="form-control input-sm" />
-                                <span class="help-block"></span>
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email"/>
+                            </div>
+                             <div class="form-group">
+                                <label for="address"><i class="zmdi zmdi-email"></i></label>
+                                <input type="text" name="Address" id="address" placeholder="Your Address"/>
                             </div>
                             <div class="form-group">
-                                <asp:Button ID="btnlogin" runat="server" Text="Register" CssClass="btn btn-primary" />
-                            </div>                            
-                    
+                                <label for="Contact No"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="text" name="Address" id="Contact No" placeholder="Your Contact No"/>
                             </div>
-
-                                
-                        </div>
-
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
                     </div>
-
+                    <div class="signup-image">                        
+                        <figure><img src="Images/sssss.jpg" /></figure>
+                        <a href="#" class="signup-image-link">I am already member</a>
+                    </div>
                 </div>
-
             </div>
-        
-    </form>
-        <script>
-        function autoResizeDiv()
-        {
-            document.getElementById('main').style.height = window.innerHeight +'px';
-        }
-        window.onresize = autoResizeDiv;
-        autoResizeDiv();
-    </script>
+        </section>
+    </div> 
+    
+    <script src="js/main.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
 </body>
 </html>

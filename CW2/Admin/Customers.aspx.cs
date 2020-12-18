@@ -20,6 +20,7 @@ namespace CW2.Admin
 
         }
 
+        //Data binding
         void PopulateGridview()
         {
             DataTable dtbl = new DataTable();
@@ -50,8 +51,10 @@ namespace CW2.Admin
 
         protected void gvCustomer_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            //tryblock
             try
             {
+                //Insert customer Query
                 if (e.CommandName.Equals("AddNew"))
                 {
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
@@ -73,6 +76,7 @@ namespace CW2.Admin
                     }
                 }
             }
+            //catch block
             catch (Exception ex)
             {
                 lblSuccessMessage.Text = "";
@@ -127,8 +131,10 @@ namespace CW2.Admin
 
         protected void gvCustomer_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            //try block
             try
             {
+                //Delete customer query
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
@@ -141,6 +147,7 @@ namespace CW2.Admin
                     lblErrorMessage.Text = "";
                 }
             }
+            //catch blcok
             catch (Exception ex)
             {
                 lblSuccessMessage.Text = "";
