@@ -14,10 +14,12 @@ namespace CW2
         private SqlConnection con;
         private SqlCommand com;
         private SqlDataReader dreader;
+        public static int userId = 1;
 
         public Login()
         {
-            constr = ConfigurationManager.AppSettings["constr"].ToString();
+            constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            //constr = ConfigurationManager.AppSettings["constr"].ToString();
             con = new SqlConnection(constr);
         }
 
@@ -40,7 +42,7 @@ namespace CW2
             {
                 if (type == 1)
                 {
-                    sql = "SELECT * FROM tbl_cust_login WHERE usr_name='" + this.uname + "';";
+                    sql = "SELECT * FROM tbl_cust_login WHERE cus_email='" + this.uname + "';";
                 }
                 else if (type == 0)
                 {
@@ -53,8 +55,9 @@ namespace CW2
                 if (dreader.HasRows == true)
                 {
                     dreader.Read();
-                    if (this.password == dreader["usr_password"].ToString())
+                    if (this.password == dreader["cus_password"].ToString())
                     {
+
                         if (dreader["usr_status"].ToString() == "1")
                         {
                             result = 2;
@@ -63,6 +66,7 @@ namespace CW2
                                 int utype = int.Parse(dreader["usr_type"].ToString());
                                 result = int.Parse("2" + utype.ToString());
                             }
+
                         }
                         else
                         {

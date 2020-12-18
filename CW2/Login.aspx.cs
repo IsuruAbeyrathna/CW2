@@ -42,7 +42,7 @@ namespace CW2
                 else if (result == 2)
                 {
                     Session["uname"] = uname;
-                    Response.Redirect("cust_dashboard.aspx");
+                    Response.Redirect("Signup.aspx");
                 }
             }
             catch (Exception ex)

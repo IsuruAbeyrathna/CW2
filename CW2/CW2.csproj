@@ -142,6 +142,9 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Customer\CustomerDashboard.aspx" />
+    <Content Include="Customer\CustomerPlaceOrder.aspx" />
+    <Content Include="Customer\TrackCustomerOrders.aspx" />
     <Content Include="Images\Annotation 2020-12-17 214654ss.jpg" />
     <Content Include="Reports\CusRep.aspx" />
     <Content Include="Reports\EmpRep.aspx" />
@@ -207,6 +210,7 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Admin\AdmHome.Master" />
     <Content Include="Clerk\ClerkHome.Master" />
+    <Content Include="Customer\Customer.Master" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -232,6 +236,17 @@
     </None>
     <Content Include="XYZLMSDataSetEmp.xsc">
       <DependentUpon>XYZLMSDataSetEmp.xsd</DependentUpon>
+    </Content>
+    <Content Include="XYZLMSDataSetcus.xsc">
+      <DependentUpon>XYZLMSDataSetcus.xsd</DependentUpon>
+    </Content>
+    <None Include="XYZLMSDataSetcus.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>XYZLMSDataSetcus.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="XYZLMSDataSetcus.xss">
+      <DependentUpon>XYZLMSDataSetcus.xsd</DependentUpon>
     </Content>
     <None Include="XYZLMSDataSetEmp.xsd">
       <Generator>MSDataSetGenerator</Generator>
@@ -337,6 +352,37 @@
     <Compile Include="Clerk\ClDashboard.aspx.designer.cs">
       <DependentUpon>ClDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Customer.Master.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer.Master.designer.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerDashboard.aspx.cs">
+      <DependentUpon>CustomerDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerDashboard.aspx.designer.cs">
+      <DependentUpon>CustomerDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerPlaceOrder.aspx.cs">
+      <DependentUpon>CustomerPlaceOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerPlaceOrder.aspx.designer.cs">
+      <DependentUpon>CustomerPlaceOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\TrackCustomerOrders.aspx.cs">
+      <DependentUpon>TrackCustomerOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\TrackCustomerOrders.aspx.designer.cs">
+      <DependentUpon>TrackCustomerOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Services.cs" />
     <Compile Include="Reports\CusRep.aspx.cs">
       <DependentUpon>CusRep.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -387,6 +433,11 @@
     <Compile Include="Signup.aspx.designer.cs">
       <DependentUpon>Signup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="XYZLMSDataSetcus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XYZLMSDataSetcus.xsd</DependentUpon>
+    </Compile>
     <Compile Include="XYZLMSDataSetEmp.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -395,7 +446,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
@@ -403,6 +453,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Reports\Report2.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
