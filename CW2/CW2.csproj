@@ -335,6 +335,39 @@
     <Content Include="XYZLMSDataSetcus.xsc">
       <DependentUpon>XYZLMSDataSetcus.xsd</DependentUpon>
     </Content>
+    <Content Include="XYZLMSDataSet.xsc">
+      <DependentUpon>XYZLMSDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="XYZLMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>XYZLMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="XYZLMSDataSet.xss">
+      <DependentUpon>XYZLMSDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="XYZLMSDataSet1.xsc">
+      <DependentUpon>XYZLMSDataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="XYZLMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>XYZLMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="XYZLMSDataSet1.xss">
+      <DependentUpon>XYZLMSDataSet1.xsd</DependentUpon>
+    </Content>
+    <Content Include="XYZLMSDataSet12.xsc">
+      <DependentUpon>XYZLMSDataSet12.xsd</DependentUpon>
+    </Content>
+    <None Include="XYZLMSDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>XYZLMSDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="XYZLMSDataSet12.xss">
+      <DependentUpon>XYZLMSDataSet12.xsd</DependentUpon>
+    </Content>
     <None Include="XYZLMSDataSetcus.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>XYZLMSDataSetcus.Designer.cs</LastGenOutput>
@@ -350,6 +383,17 @@
     </None>
     <Content Include="XYZLMSDataSetEmp.xss">
       <DependentUpon>XYZLMSDataSetEmp.xsd</DependentUpon>
+    </Content>
+    <Content Include="XYZLMSDataSetor.xsc">
+      <DependentUpon>XYZLMSDataSetor.xsd</DependentUpon>
+    </Content>
+    <None Include="XYZLMSDataSetor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>XYZLMSDataSetor.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="XYZLMSDataSetor.xss">
+      <DependentUpon>XYZLMSDataSetor.xsd</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -543,6 +587,21 @@
     <Compile Include="Signup.aspx.designer.cs">
       <DependentUpon>Signup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="XYZLMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XYZLMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="XYZLMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XYZLMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="XYZLMSDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XYZLMSDataSet12.xsd</DependentUpon>
+    </Compile>
     <Compile Include="XYZLMSDataSetcus.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -552,6 +611,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>XYZLMSDataSetEmp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="XYZLMSDataSetor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XYZLMSDataSetor.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -564,6 +628,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Reports\Report2.rdlc" />
+    <EmbeddedResource Include="Reports\Report3.rdlc" />
+    <EmbeddedResource Include="Reports\Report5.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

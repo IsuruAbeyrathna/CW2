@@ -37,7 +37,7 @@
                             <asp:Label ID="lblmsg" runat="server"></asp:Label>                            
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <asp:TextBox ID="txtname" runat="server" CssClass="col-12 form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtname" runat="server" CssClass="col-12 form-control" placeholder="Your Name"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
@@ -73,13 +73,13 @@
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                             </div>
                             <div class="form-group form-button">
-                                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" class="form-submit" />
+                                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Register" class="form-submit" />
                             </div>
                         </form>
                     </div>
                     <div class="signup-image">                        
                         <figure><img src="Images/sssss.jpg" /></figure>
-                        <a href="#" class="signup-image-link">I am already member</a>
+                        <a href="Login.aspx" class="signup-image-link">I am already member</a>
                     </div>
                 </div>
             </div>

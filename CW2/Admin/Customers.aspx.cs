@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
@@ -7,8 +8,8 @@ namespace CW2.Admin
 {
     public partial class Customers : System.Web.UI.Page
     {
-
-        string connectionString = @"Data source=DESKTOP-P61A79S;initial catalog=XYZLMS;integrated security=true";
+        //Conncetion string
+        string connectionString = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
                 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace CW2.Admin
             }
 
         }
-
+        //customer insert
         protected void gvCustomer_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             //tryblock
@@ -83,20 +84,24 @@ namespace CW2.Admin
             }
         }
 
+        //customer edit
         protected void gvCustomer_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gvCustomer.EditIndex = e.NewEditIndex;
             PopulateGridview();
         }
 
+        //customer cancel edit
         protected void gvCustomer_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             gvCustomer.EditIndex = -1;
             PopulateGridview();
         }
 
+        // customer updating
         protected void gvCustomer_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+            //try block
             try
             {
                 
@@ -120,6 +125,7 @@ namespace CW2.Admin
                     }
                 
             }
+            //catch block
             catch (Exception ex)
             {
                 lblSuccessMessage.Text = "";
@@ -127,6 +133,7 @@ namespace CW2.Admin
             }
         }
 
+        //customer delete
         protected void gvCustomer_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             //try block

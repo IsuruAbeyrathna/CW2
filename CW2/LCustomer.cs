@@ -73,6 +73,7 @@ namespace CW2
         public int insertcustomer()
         {
             int result = 0;
+            //try block
             try
             {
                 //Insert cusomer record
@@ -89,6 +90,7 @@ namespace CW2
 
                 result = 1;
             }
+            //catch block
             catch (Exception ex)
             {
                 throw ex;

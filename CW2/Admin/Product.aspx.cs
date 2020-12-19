@@ -23,6 +23,7 @@ namespace CW2.Admin
 
         }
 
+        //clear function
         void clear()
         {
             txtsname.Text = "";
