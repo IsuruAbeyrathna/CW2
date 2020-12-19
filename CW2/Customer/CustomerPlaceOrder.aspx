@@ -92,7 +92,7 @@
     
     <table style="width:100%;">
         <tr>
-            <td class="auto-style2">Edit/Delete my orders</td>
+            <td class="auto-style2">My orders</td>
             <td class="auto-style2"></td>
             <td class="auto-style2"></td>
         </tr>
@@ -105,8 +105,6 @@
                         <asp:BoundField DataField="ord_status" HeaderText="Order Status" SortExpression="ord_status" />
                         <asp:BoundField DataField="ord_description" HeaderText="Description" SortExpression="ord_description" />
                         <asp:BoundField DataField="ord_date" HeaderText="Order Date" SortExpression="ord_date" />
-                        <asp:ButtonField CommandName="edit_order" Text="Edit" />
-                        <asp:ButtonField CommandName="delete_order" Text="Delete" />
                     </Columns>
                 </asp:GridView>
             </td>

@@ -15,12 +15,34 @@ namespace CW2
         private SqlCommand com;
         private SqlDataReader dreader;
         public static int userId = 1;
+        public string UPass = "1234";
+        public string UserType;
+
 
         public Login()
         {
             constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
             //constr = ConfigurationManager.AppSettings["constr"].ToString();
             con = new SqlConnection(constr);
+            
+        }
+
+        void bla()
+        {
+            UPass = password.ToString();
+            if (UPass == "1234")
+            {
+                UserType = "Customer";
+            }
+            else if (UPass == "12345")
+            {
+                UserType = "Admin";
+            }
+            else
+            {
+                UserType = "Clerk";
+            }
+             
         }
 
         public string Password
@@ -40,14 +62,7 @@ namespace CW2
             int result = 0;
             try
             {
-                if (type == 1)
-                {
-                    sql = "SELECT * FROM tbl_cust_login WHERE cus_email='" + this.uname + "';";
-                }
-                else if (type == 0)
-                {
-                    sql = "SELECT * FROM tbl_emp_login WHERE usr_name='" + this.uname + "';";
-                }
+                sql = "SELECT * FROM tbl_login WHERE usr_name='" + this.uname + "';";
 
                 com = new SqlCommand(sql, con);
                 con.Open();

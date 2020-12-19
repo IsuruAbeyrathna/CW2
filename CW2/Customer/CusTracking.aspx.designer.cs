@@ -10,24 +10,33 @@
 namespace CW2.Customer {
     
     
-    public partial class CustomerDashboard {
+    public partial class WebForm1 {
         
         /// <summary>
-        /// lblCountor control.
+        /// Txtsearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCountor;
+        protected global::System.Web.UI.WebControls.TextBox Txtsearch;
         
         /// <summary>
-        /// Table1 control.
+        /// ButSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Table1;
+        protected global::System.Web.UI.WebControls.Button ButSearch;
+        
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

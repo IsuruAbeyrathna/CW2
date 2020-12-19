@@ -48,15 +48,14 @@
                         
                     </li>
                     <li>
-                        <a href="CustomerOrders.aspx">Orders</a>
-                        
+                        <a href="CustomerPlaceOrder.aspx">Orders</a>                       
                         
                     </li>
                     <li>
-                        <a href="Tracking.aspx">Tracking</a>
+                        <a href="CusTracking.aspx">Tracking</a>
                     </li>
                     <li>
-                        <a href="Services.aspx">Services</a>
+                        <a href="../HomePage.aspx">Log Out</a>
                     </li>
                 </ul>
 
@@ -78,14 +77,12 @@
                         <div class="navbar-header">
                             <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
                                 <i class="glyphicon glyphicon-align-left"></i>
-                                <span>Toggle Sidebar</span>
+                                <span></span>
                             </button>
                         </div>
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Page</a></li>
-                            </ul>
+                            
                         </div>
                     </div>
                 </nav>

@@ -16,39 +16,10 @@ namespace CW2
 
         protected void btnlogin_Click(object sender, EventArgs e)
         {
-            string uname, pass;
-            uname = txtuname.Text;
-            pass = txtpass.Text;
 
-            if (uname == "" || pass == "")
-            {
-                lblmsg.Text = "Please enter both username and password";
-                return;
-            }
-            try
-            {
-                Login obj = new Login();
-                obj.Uname = uname;
-                obj.Password = pass;
-                int result = obj.validateLogin(1);
-                if (result == 0)
-                {
-                    lblmsg.Text = "Invalid username or password, try again";
-                }
-                else if (result == 1)
-                {
-                    lblmsg.Text = "Your account has been locked, please contact administrator";
-                }
-                else if (result == 2)
-                {
-                    Session["uname"] = uname;
-                    Response.Redirect("Signup.aspx");
-                }
-            }
-            catch (Exception ex)
-            {
-                lblmsg.Text = ex.Message.ToString();
-            }
+           Response.Redirect("Admin/AdDashboard.aspx");
+
+           //Response.Redirect("Customer/CustomerDashboard.aspx");
         }
     }
 }

@@ -147,6 +147,7 @@
     <Content Include="Customer\CustomerDashboard.aspx" />
     <Content Include="Customer\CustomerPlaceOrder.aspx" />
     <Content Include="Customer\TrackCustomerOrders.aspx" />
+    <Content Include="Customer\CusTracking.aspx" />
     <Content Include="fonts\material-icon\css\material-design-iconic-font.css" />
     <Content Include="fonts\material-icon\css\material-design-iconic-font.min.css" />
     <Content Include="fonts\material-icon\fonts\Material-Design-Iconic-Font.svg" />
@@ -480,6 +481,13 @@
     </Compile>
     <Compile Include="Customer\TrackCustomerOrders.aspx.designer.cs">
       <DependentUpon>TrackCustomerOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CusTracking.aspx.cs">
+      <DependentUpon>CusTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CusTracking.aspx.designer.cs">
+      <DependentUpon>CusTracking.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBHelper.cs" />
     <Compile Include="LCustomer.cs" />

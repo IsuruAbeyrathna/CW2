@@ -14,7 +14,7 @@ namespace CW2.Customer
     {
         DataTable serviceList;
         DataTable orderList;
-        int customerId = Login.userId;
+        int customerId = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -95,13 +95,16 @@ namespace CW2.Customer
         }
         public void LoadcustomerOders()
         {
+
             grdCustomerOrders.DataSource = null;
             var orderListQuery = @"SELECT [order_id]
                                   ,[ord_fee]
                                   ,[ord_status]
                                   ,[ord_description]
                                   ,[ord_date]
-                              FROM [XYZLMS].[dbo].[tbl_order] where [CustomerId]='" + customerId + "'";
+                                  ,[service_id]
+                                  ,[product_id]                                                              
+                              FROM [XYZLMS].[dbo].[tbl_order] where [cus_id]='" + customerId + "'";
             orderList = DBHelper.ExecuteDataTable(orderListQuery, null);
             if (orderList.Rows.Count > 0)
             {

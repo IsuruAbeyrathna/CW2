@@ -60,15 +60,14 @@ namespace CW2.Admin
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
                     {
                         sqlCon.Open();
-                        string query = "INSERT INTO tbl_customer (cus_fname,cus_lsname,cus_address,cus_email,cus_phone,cus_status,cus_password) VALUES (@fName,@lsName,@address,@email,@phone,@status,@password)";
+                        string query = "INSERT INTO tbl_customer (cus_name,cus_email,cus_address,cus_phone,cus_password,cus_status) VALUES (@Name,@email,@address,@phone,@password,@status)";
                         SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                        sqlCmd.Parameters.AddWithValue("@fName", (gvCustomer.FooterRow.FindControl("txtFirstNameFooter") as TextBox).Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@lsName", (gvCustomer.FooterRow.FindControl("txtLastNameFooter") as TextBox).Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Name", (gvCustomer.FooterRow.FindControl("txtFirstNameFooter") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@address", (gvCustomer.FooterRow.FindControl("txtaddressFooter") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@email", (gvCustomer.FooterRow.FindControl("txtEmailFooter") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@phone", (gvCustomer.FooterRow.FindControl("txtphoneFooter") as TextBox).Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@status", (gvCustomer.FooterRow.FindControl("txtstatusFooter") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@password", (gvCustomer.FooterRow.FindControl("txtpassFooter") as TextBox).Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@status", (gvCustomer.FooterRow.FindControl("txtstatusFooter") as TextBox).Text.Trim());
                         sqlCmd.ExecuteNonQuery();
                         PopulateGridview();
                         lblSuccessMessage.Text = "New Record Added";
@@ -105,15 +104,14 @@ namespace CW2.Admin
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
                     {
                         sqlCon.Open();
-                        string query = "UPDATE tbl_customer SET cus_fname=@fName,cus_lsname=@lsName,cus_address=@address,cus_email=@email,cus_phone=@phone,cus_status=@status,cus_password=@password WHERE cus_id = @id";
+                        string query = "UPDATE tbl_customer SET cus_name=@Name,cus_email=@email,cus_address=@address,cus_phone=@phone,cus_password=@password,cus_status=@status WHERE cus_id = @id";
                         SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                        sqlCmd.Parameters.AddWithValue("@fName", (gvCustomer.Rows[e.RowIndex].FindControl("txtFirstName") as TextBox).Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@lsName", (gvCustomer.Rows[e.RowIndex].FindControl("txtLastName") as TextBox).Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Name", (gvCustomer.Rows[e.RowIndex].FindControl("txtFirstName") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@address", (gvCustomer.Rows[e.RowIndex].FindControl("txtadd") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@email", (gvCustomer.Rows[e.RowIndex].FindControl("txtEmail") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@phone", (gvCustomer.Rows[e.RowIndex].FindControl("txtphone") as TextBox).Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@status", (gvCustomer.Rows[e.RowIndex].FindControl("txtstatus") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@password", (gvCustomer.Rows[e.RowIndex].FindControl("txtpass") as TextBox).Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@status", (gvCustomer.Rows[e.RowIndex].FindControl("txtstatus") as TextBox).Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@id",Convert.ToInt32(gvCustomer.DataKeys[e.RowIndex].Value.ToString()));
                         sqlCmd.ExecuteNonQuery();
                         PopulateGridview();

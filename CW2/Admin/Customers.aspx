@@ -32,18 +32,18 @@
                 <FooterTemplate>
                     <asp:TextBox ID="txtFirstNameFooter" runat="server" />
                 </FooterTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Last Name">
+            </asp:TemplateField>         
+             <asp:TemplateField HeaderText="Email">
                 <ItemTemplate>
-                    <asp:Label Text='<%# Eval("cus_lsname") %>' runat="server" />
+                    <asp:Label Text='<%# Eval("cus_email") %>' runat="server" />
                 </ItemTemplate>
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtLastName" Text='<%# Eval("cus_lsname") %>' runat="server" />
+                    <asp:TextBox ID="txtEmail" Text='<%# Eval("cus_email") %>' runat="server" />
                 </EditItemTemplate>
                 <FooterTemplate>
-                    <asp:TextBox ID="txtLastNameFooter" runat="server" />
+                    <asp:TextBox ID="txtEmailFooter" runat="server" />
                 </FooterTemplate>
-            </asp:TemplateField>
+            </asp:TemplateField>   
             <asp:TemplateField HeaderText="Address">
                 <ItemTemplate>
                     <asp:Label Text='<%# Eval("cus_address") %>' runat="server" />
@@ -54,18 +54,7 @@
                 <FooterTemplate>
                     <asp:TextBox ID="txtaddressFooter" runat="server" />
                 </FooterTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Email">
-                <ItemTemplate>
-                    <asp:Label Text='<%# Eval("cus_email") %>' runat="server" />
-                </ItemTemplate>
-                <EditItemTemplate>
-                    <asp:TextBox ID="txtEmail" Text='<%# Eval("cus_email") %>' runat="server" />
-                </EditItemTemplate>
-                <FooterTemplate>
-                    <asp:TextBox ID="txtEmailFooter" runat="server" />
-                </FooterTemplate>
-            </asp:TemplateField>
+            </asp:TemplateField>           
                 <asp:TemplateField HeaderText="Phone">
                 <ItemTemplate>
                     <asp:Label Text='<%# Eval("cus_phone") %>' runat="server" />
@@ -75,17 +64,6 @@
                 </EditItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="txtphoneFooter" runat="server" />
-                </FooterTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Status">
-                <ItemTemplate>
-                    <asp:Label Text='<%# Eval("cus_status") %>' runat="server" />
-                </ItemTemplate>
-                <EditItemTemplate>
-                    <asp:TextBox ID="txtstatus" Text='<%# Eval("cus_status") %>' runat="server" />
-                </EditItemTemplate>
-                <FooterTemplate>
-                    <asp:TextBox ID="txtstatusFooter" runat="server" />
                 </FooterTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Password">
@@ -99,7 +77,19 @@
                     <asp:TextBox ID="txtpassFooter" runat="server" />
                 </FooterTemplate>
             </asp:TemplateField>
-            <asp:TemplateField>
+             <asp:TemplateField HeaderText="Status">
+                <ItemTemplate>
+                    <asp:Label Text='<%# Eval("cus_status") %>' runat="server" />
+                </ItemTemplate>
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtstatus" Text='<%# Eval("cus_status") %>' runat="server" />
+                </EditItemTemplate>
+                <FooterTemplate>
+                    <asp:TextBox ID="txtstatusFooter" runat="server" />
+                </FooterTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField>          
+            
                 <ItemTemplate>
                     <asp:ImageButton ImageUrl="../Images/edit.png" runat="server" CommandName="Edit" ToolTip="Edit" Width="20px" Height="20px" />
                     <asp:ImageButton ImageUrl="../Images/delete.png" runat="server" CommandName="Delete" ToolTip="Delete" Width="20px" Height="20px" />
@@ -120,7 +110,7 @@
     <asp:Label ID="lblErrorMessage" Text="" runat="server" ForeColor="Red" />
 
 
-&nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:XYZLMSConnectionString %>" SelectCommand="SELECT * FROM [tbl_customer]" UpdateCommand="UPDATE[tbl_customer] set[cus_fname]=@name,  [cus_lsname]=@lname, [cus_address]=@address, [cus_email]= @email, [cus_phone]= @phone, [cus_status]= @status, [cus_password]= @pass where [cus_id]=@id" DeleteCommand="DELETE from [tbl_customer] where [cus_id]=@id"></asp:SqlDataSource>
+&nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:XYZLMSConnectionString %>" SelectCommand="SELECT * FROM [tbl_customer]" UpdateCommand="UPDATE[tbl_customer] set[cus_name]=@name, [cus_email]= @email, [cus_address]=@address , [cus_phone]= @phone, [cus_password]= @pass, [cus_status]= @status where [cus_id]=@id" DeleteCommand="DELETE from [tbl_customer] where [cus_id]=@id"></asp:SqlDataSource>
 &nbsp;
 
 
